@@ -1,0 +1,6 @@
+- name: ping the server
+  hosts: 54.165.113.97 # which server ur connecting to
+  # List of tasks/collections/modules
+  tasks:
+  - name: ping
+    ansible.builtin.ping:
