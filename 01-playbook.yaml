@@ -1,5 +1,5 @@
 - name: ping the server
-  hosts: 172.31.31.82 # which server ur connecting to
+  hosts: frontend # which server ur connecting to
   # List of tasks/collections/modules
   tasks:
   - name: ping
