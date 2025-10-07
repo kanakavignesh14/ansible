@@ -1,0 +1,7 @@
+- name: to sysytem facts
+  hosts: local
+  connection: local
+  tasks:
+   - name: facts
+   ansible.bulitin.debug:
+     msg: "{{ ansible_facts}}"
