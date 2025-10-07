@@ -21,3 +21,11 @@
     - name: dictionary to list
       ansible.builtin.debug:
         msg: "Rockers are {{ rockers | dict2items }}"
+
+    - name: storing outpuut
+      ansible.builtin.shell: cat /etc/passwd | grep root
+      register: command_output   
+
+    - name: printing outpuut
+      ansible.builtin.debug:
+         msg: "{{ command_output }}"  
