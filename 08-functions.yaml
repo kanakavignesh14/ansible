@@ -1,0 +1,22 @@
+- name: functions
+  hosts: local
+  connection: local
+  vars:
+    technologies: DevOps, Linux, shell, ansible
+    rockers:
+      drums: John Bonham
+      bass: John Paul Jones
+      guitar: Jimmy Page
+      vocals: Robert Plant
+  tasks:
+  - name: default variables
+     ansible.builtin.debug:
+        msg: "heello, {{ name | default('viginesh') }}"
+
+  - name: convert string to lists
+     ansible.builtin.debug:
+        msg: "Technologies are {{ technologies | split(',') }}"          
+  
+  - name: dictionary to lists
+    ansible.builtin.debug:
+        msg: "heello, {{ rockers | dict2items }}"
