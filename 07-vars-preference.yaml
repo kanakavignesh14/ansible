@@ -15,3 +15,12 @@
       NAME: from tasks
      ansible.builtin.debug:
        msg: "hello, CHECKING PREFERENCE.... {{ NAME }}"    
+
+
+       #1st preference goes to : command line arguments
+       #2nd goes to task level variables
+       #3rd goes to files variables (inporting from course.yaml)
+       #4th goes to prompt level variables
+       #5th goes to play level variables
+       #6th goes to inventory
+       
