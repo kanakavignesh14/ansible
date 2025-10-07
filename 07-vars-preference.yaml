@@ -1,0 +1,17 @@
+- name: variables PREFERENCE
+  hosts: local
+  connection: local
+  vars:
+    NAME: FROM PLAY
+  vars_files:
+  - course.yaml 
+  vars_prompt:
+  - name: NAME
+    prompt: what is your NAME?
+    private: false 
+  tasks:
+   - name: CHECKING VARIABLES PREFERENCE
+     vars:
+      NAME: from tasks
+     ansible.builtin.debug:
+       msg: "hello, CHECKING PREFERENCE.... {{ NAME }}"    
